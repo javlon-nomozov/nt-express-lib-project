@@ -1,0 +1,140 @@
+users=[{
+    id:1,
+    login:'hi',
+    full_name: 'Falonchayev Pistoncha',
+    age:14
+}]
+
+// SHELL
+`CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    full_name TEXT,
+    username TEXT UNIQUE,
+    age INTEGER
+);`
+
+
+
+books=[{
+    id:1,
+    name:'science',
+    count:14,
+    duration: 10
+}]
+
+// SHELL
+`CREATE TABLE books (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    count INTEGER,
+    duration INTEGER
+);`
+
+user_book:[{
+    id:1,
+    user_id:1,
+    book_id: 1,
+    start_date: 'dd/mm/yyyy hh:MM:ss',
+    end_date: 'dd/mm/yyyy hh:MM:ss'
+}]
+
+// SHELL
+`CREATE TABLE user_group (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
+    book_id INTEGER,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (book_id) REFERENCES books (id)
+);`
+
+
+statistics:[{
+    id:1,
+    user_id:1,
+    book_id: 1,
+    status: 'take',
+    created_at
+}]
+
+// SHELL
+//
+`CREATE TABLE logger (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
+    book_id INTEGER,
+    status TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (book_id) REFERENCES books (id)
+)`
+
+`CREATE TABLE user_group (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
+    book_id INTEGER,
+  	start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  	end_date TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (book_id) REFERENCES books (id)
+);`
+
+`CREATE TABLE user_group (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER not NULL,
+    book_id INTEGER not NULL,
+  	start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP not NULL,
+  	end_date TIMESTAMP not NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (book_id) REFERENCES books (id)
+);`
+
+
+
+-- Insert a new user
+INSERT INTO users (full_name, username, age) VALUES ('John Doe', 'johndoe', 25);
+
+-- Insert a new book
+INSERT INTO books (name, count, duration) VALUES ('Sample Book', 10, 300);
+
+-- Insert a new entry in user_group
+INSERT INTO user_group (user_id, book_id) VALUES (1, 1);
+
+-- Insert a new log entry
+INSERT INTO logger (user_id, book_id, status) VALUES (1, 1, 'Book Checked Out');
+
+
+
+-- Select all users
+SELECT * FROM users;
+
+-- Select all books
+SELECT * FROM books;
+
+-- Select all entries from user_group
+SELECT * FROM user_group;
+
+-- Select all log entries
+SELECT * FROM logger;
+
+
+-- Update the age of the user with username 'johndoe'
+UPDATE users SET age = 26 WHERE username = 'johndoe';
+
+-- Update the count of the book with ID 1
+UPDATE books SET count = 9 WHERE id = 1;
+
+-- Update the status of the log entry with ID 1
+UPDATE logger SET status = 'Book Returned' WHERE id = 1;
+
+
+-- Delete the user with username 'johndoe'
+DELETE FROM users WHERE username = 'johndoe';
+
+-- Delete the book with ID 1
+DELETE FROM books WHERE id = 1;
+
+-- Delete the entry in user_group with user_id 1 and book_id 1
+DELETE FROM user_group WHERE user_id = 1 AND book_id = 1;
+
+-- Delete the log entry with ID 1
+DELETE FROM logger WHERE id = 1;

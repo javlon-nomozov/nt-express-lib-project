@@ -1,0 +1,355 @@
+_type: export
+__export_format: 4
+__export_date: 2023-11-13T20:57:41.876Z
+__export_source: insomnia.desktop.app:v8.3.0
+resources:
+  - _id: req_b6063c662cab41b4877d1cdff3cb24d8
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822477095
+    created: 1699822381258
+    url: http://localhost:3005/api/user
+    name: get all users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699822381258
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    parentId: null
+    modified: 1699822362454
+    created: 1699822362454
+    name: library.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_79b7ee132f40485ca2c3a3b37d1e75ff
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822458145
+    created: 1699822458145
+    url: http://localhost:3005/api/user/6
+    name: get user by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699714404553
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_04733457da694b8e9d05e179d5eb5d8e
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822568697
+    created: 1699822497360
+    url: http://localhost:3005/api/user
+    name: create new user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"full_name":"Javlon", "username":"lvl", "age":20}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699660416200.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dd386b025cad4c9ba0ca7f751006512b
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699863356828
+    created: 1699822640901
+    url: http://localhost:3005/api/user/2
+    name: edit user
+    description: qaysi malumotni body da kiritsa o'shanigina update qib beradi
+    method: PUT
+    body:
+      mimeType: application/json
+      text: '{"full_name":"Hong", "age":20}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699633422024.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8482bdc354ba410eb216dc68ca5e4b86
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699852088438
+    created: 1699824300404
+    url: http://localhost:3005/api/user/7
+    name: delete user
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699619924936.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_545953e2d9d64e9eaf6d0caca82b4c02
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699856980832
+    created: 1699852102806
+    url: http://localhost:3005/api/book
+    name: get all books
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699613176392.0625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e6e480975f374de2824bd5c34b6ff64b
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699857006066
+    created: 1699856996677
+    url: http://localhost:3005/api/book/3
+    name: get book by id
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699609802120.0312
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_37b18e1f77fb41f1a846b2667ab86ac8
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699862427561
+    created: 1699857039090
+    url: http://localhost:3005/api/book
+    name: "create new book "
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"name":"English","count":3,"duration":15}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699608114984.0156
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_73c4d60687af4f06a7e51c6ae8eb4714
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699863337720
+    created: 1699857094923
+    url: http://localhost:3005/api/book/2
+    name: "update book "
+    description: qaysi malumotni body da kiritsa o'shanigina update qib beradi
+    method: PUT
+    body:
+      mimeType: application/json
+      text: '{"count":1,"duration":12}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699607271416.0078
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1de62f69b2ee422e96476937fb22619c
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699863403802
+    created: 1699863376217
+    url: http://localhost:3005/api/book/2
+    name: "delete book "
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699606849632.004
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_51dbc450bb234c1fbcd87dd94262a505
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699892029561
+    created: 1699890322230
+    url: http://localhost:3005/api/user-book
+    name: get all userBook
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699606638740.002
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bc35e9146f1e4d23b5ce6b1314a200b1
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699907841385
+    created: 1699892045364
+    url: http://localhost:3005/api/user-book
+    name: create userBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"userId":1 , "bookId":1}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.3.0
+    authentication: {}
+    metaSortKey: -1699606533294.001
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_52e5868b8e6c52a64837e2e98d8a096396f1dc8e
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822362507
+    created: 1699822362507
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1699822362507
+    _type: environment
+  - _id: jar_52e5868b8e6c52a64837e2e98d8a096396f1dc8e
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822362512
+    created: 1699822362512
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_8a52987de045425eb9545642b1bb74bd
+    parentId: wrk_cf9b1a8b6ba24ae99120008ac621b3b3
+    modified: 1699822362474
+    created: 1699822362474
+    fileName: New Document
+    contents: ""
+    contentType: yaml
+    _type: api_spec
